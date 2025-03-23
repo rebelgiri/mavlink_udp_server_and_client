@@ -17,5 +17,9 @@ Navigate to the project's root directory and execute the following CMake command
 
 ```sh
 cmake -B build -H. -DCMAKE_PREFIX_PATH=$(pwd)/../../mavlink/install
+```
 
+### 3. Compile the Project
+```sh
 cmake --build build
+```
