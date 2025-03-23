@@ -1,21 +1,21 @@
-# MAVLink UDP Server &amp; Client in C++ for Linux
+# MAVLink UDP Server & Client in C++ for Linux  
 
-The Linux version of the MAVLink UDP server and client using POSIX sockets for network communication.
+This project implements a MAVLink UDP server and client using POSIX sockets for network communication on Linux.  
 
-- UDP Server (GCS) - Receives MAVLink Messages
-This server will listen on a specified UDP port, receive MAVLink messages, and decode them.
+## Components  
 
-- UDP Client (Drone) - Sends MAVLink Heartbeats
-The client will send a heartbeat message to the server using the MAVLink protocol.
+- **UDP Server (GCS)** – Listens on a specified UDP port, receives MAVLink messages, and decodes them.  
+- **UDP Client (Drone)** – Sends MAVLink heartbeat messages to the server.  
 
-## Build Steps
+## Build Instructions  
 
-- Install MAVLink. Follow steps here https://github.com/mavlink/mavlink
+### 1. Install MAVLink and Generate Headers  
+Follow the instructions in the official MAVLink repository: [MAVLink GitHub](https://github.com/mavlink/mavlink).  
 
-- Go top directory and execute below cmake command make sure CMAKE_PREFIX_PATH is given
+### 2. Configure the Build  
+Navigate to the project's root directory and execute the following CMake command. Ensure `CMAKE_PREFIX_PATH` is set to the location of `mavlink.h`:  
 
-```cmake -Bbuild -H. -DCMAKE_PREFIX_PATH=$(pwd)/../../mavlink/install```
+```sh
+cmake -B build -H. -DCMAKE_PREFIX_PATH=$(pwd)/../../mavlink/install
 
-- Build
-
-```cmake --build build```
+cmake --build build
