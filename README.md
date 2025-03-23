@@ -10,12 +10,12 @@ The client will send a heartbeat message to the server using the MAVLink protoco
 
 ## Build Steps
 
-1. Install MAVLink follow steps here https://github.com/mavlink/mavlink
+- Install MAVLink follow steps here https://github.com/mavlink/mavlink
 
-2. Go top directory and execute below cmake command make sure CMAKE_PREFIX_PATH is given
+- Go top directory and execute below cmake command make sure CMAKE_PREFIX_PATH is given
 
 ```cmake -Bbuild -H. -DCMAKE_PREFIX_PATH=$(pwd)/../../mavlink/install```
 
-3. Build
+- Build
 
 ```cmake --build build```
